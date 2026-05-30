@@ -15,8 +15,6 @@ body {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    opacity: 0.8;
-    background-image: linear-gradient(rgb(1, 18, 13), rgb(5, 31, 55), rgb(11, 1, 24), rgb(0, 20, 16), rgb(1, 1, 17));
 }
 
 #header {
@@ -149,13 +147,12 @@ nav ul li a:hover::after {
 }
 
 .services-list div {
-    background: #ffffff00;
+    background: #262626;
     padding: 35px;
     font-size: 12px;
     font-weight: 300;
-    border-top-right-radius: 20%;
-    border-bottom-left-radius: 20%;
-    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
 }
 
 .services-list div i {
@@ -175,8 +172,7 @@ nav ul li a:hover::after {
 
 .services-list div:hover {
     background: #037070;
-    transform: translateY(-7px);
-    transition: 0.8s;
+    transform: translateY(-10px);
 }
 
 /* ---------portfolio---------- */
@@ -305,101 +301,4 @@ nav ul li a:hover::after {
     font-weight: 350;
     margin-top: 10px;
     text-shadow: #05a3a3;
-}
-
-
-
-
-
-/* Extra */
-
-.anim {
-    font-size: 15px;
-    color: #8bf;
-    text-align: left;
-    font-family: Lato, sans-serif;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-/* Typewriter effect 1 */
-@keyframes typing {
-    0%,
-    24.99% {
-        content: "developer";
-    }
-
-    25%,
-    49.99% {
-        content: "writer";
-    }
-
-    50%,
-    74.99% {
-        content: "reader";
-    }
-
-    75%,
-    100% {
-        content: "Emrus";
-    }
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
-
-.typewriter {
-    --caret: currentcolor;
-}
-
-.typewriter::before {
-    content: "";
-    animation: typing 13.5s infinite;
-}
-
-.typewriter::after {
-    content: "";
-    border-right: 2px solid var(--caret);
-    animation: blink 0.5s linear infinite;
-}
-
-
-@media (prefers-reduced-motion) {
-    .typewriter::after {
-        animation: none;
-    }
-
-    @keyframes sequencePopup {
-
-        0%,
-        100% {
-            content: "Developer";
-        }
-
-        25% {
-            content: "writer";
-        }
-
-        50% {
-            content: "reader";
-        }
-
-        75% {
-            content: "Emrus";
-        }
-    }
-
-    .typewriter::before {
-        content: "developer";
-        animation: sequencePopup 12s linear infinite;
-    }
 }
