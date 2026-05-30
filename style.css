@@ -121,6 +121,11 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
+.about-greeting {
+    color: antiquewhite;
+    margin-bottom: 10px;
+}
+
 .about-col2 p {
     font-size: 16 px;
     text-align: justify;
